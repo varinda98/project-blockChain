@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const route = require('./routes/route.js');
 const { json } = require('express');
 
-mongoose.set('strictQuery', true);
+ mongoose.set('strictQuery', true);
 
 
 
@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json())
 
 
-mongoose.connect("mongodb+srv://viHaAn:vihaan@cluster0.tznueha.mongodb.net/crypto", {
+mongoose.connect("mongodb+srv://varinda:Flipkart@newproject.7qwzr8u.mongodb.net/crypto", {
     useNewUrlParser: true 
 })
 .then( () => console.log("MongoDb is connected"))

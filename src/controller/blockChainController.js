@@ -9,13 +9,12 @@ const getCrypto = async function (req, res) {
         const api = {
             method: "get",
             url: "https://api.coincap.io/v2/assets",
-            headers: { Authorization: "Bearer b41a7968-3bb0-4001-ad60-034d1fd14463" }
+            headers: { Authorization: "Bearer fb5859e2-2958-4fcc-a476-7f26719a885d" }
         }
 
         let result = await axios(api)
         let data = result.data.data
         let filteredData = data.sort((a, b) => { a.changePercent24Hr - b.changePercent24Hr })
-        // console.log(filteredData);
         await blockChainModel.deleteMany()
         const finalData = await blockChainModel.create(filteredData)
         let finalResult = await blockChainModel.find().select({ __v: 0, _id: 0 })

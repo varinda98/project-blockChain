@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 
 const BlockChainSchema = new mongoose.Schema({
-    "symbol": {                 // String and Unique
+    "symbol": {                
         type: String,
         unique: true
     },     
-    "name": {                   // String and Unique
+    "name": {                  
         type: String,
         unique: true
     },     
-    "marketCapUsd": {           // String  ( not Number)
+    "marketCapUsd": {           
         type: String,
         unique: true
     },     
-    "priceUsd": {               //String
+    "priceUsd": {               
         type: String,
         unique: true
 }       
